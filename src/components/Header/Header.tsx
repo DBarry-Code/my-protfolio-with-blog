@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaLaptopCode } from "react-icons/fa";
 
 function Header() {
     const [navbarOpen, setNavbarOpen] = React.useState(false);

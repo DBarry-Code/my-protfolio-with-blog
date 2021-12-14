@@ -32,6 +32,7 @@ export const getBlogAndPortfolio = async () => {
                 date
                 slug
                 title
+                category
                 article {
                     html
                     text
@@ -54,9 +55,9 @@ export const getAllBllogs = async () => {
                 date
                 slug
                 title
+                category
                 article {
                     html
-                    text
                 }
                 image {
                     url
