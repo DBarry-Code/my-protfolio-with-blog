@@ -23,7 +23,9 @@ const Home: NextPage = ({ data }: any) => {
                 />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+            <div className='container px-5 py-20 mx-auto'>
+                <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+            </div>
         </>
     );
 };

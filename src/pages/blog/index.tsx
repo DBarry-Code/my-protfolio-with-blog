@@ -34,10 +34,7 @@ const BlogPage = ({ data }: any) => {
                                     {post.title}
                                 </h2>
                                 <p className='leading-relaxed'>
-                                    {post.article.html
-                                        .replace(/<\/?[^>]+(>|$)/g, "")
-                                        .split("", 250)}
-                                    {"..."}
+                                    {post.description}
                                 </p>
                                 <Link href={`/blog/${post.slug}`}>
                                     <a className='text-indigo-500 inline-flex items-center mt-4 hover:text-indigo-900'>

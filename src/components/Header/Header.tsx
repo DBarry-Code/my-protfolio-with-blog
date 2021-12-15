@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { FaBars, FaLaptopCode } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
 function Header() {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
 
     return (
-        <header>
-            <nav className='relative flex flex-wrap items-center justify-between px-2 py-3 bg-zinc-800 shadow-sm mb-3'>
+        <header className='relative'>
+            <nav className='fixed w-full z-10 top-0 flex flex-wrap items-center justify-between px-2 py-3 bg-zinc-800 shadow-sm mb-3'>
                 <div className='container px-4 mx-auto flex flex-wrap items-center justify-between'>
                     <div className='w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
                         <Link href='/'>

@@ -33,6 +33,7 @@ export const getBlogAndPortfolio = async () => {
                 slug
                 title
                 category
+                description
                 article {
                     html
                     text
@@ -56,6 +57,7 @@ export const getAllBllogs = async () => {
                 slug
                 title
                 category
+                description
                 article {
                     html
                 }
@@ -90,4 +92,44 @@ export const getAllPorjects = async () => {
     `;
 
     return await graphcms.request(query);
+};
+
+export const getBlogSlugs = async () => {
+    const query = gql`
+        {
+            blogs {
+                slug
+            }
+        }
+    `;
+
+    return await graphcms.request(query);
+};
+
+export const getPostBySlug = async (slug: String) => {
+    const query = gql`
+        query getPost($slug: String!) {
+            blog(where: { slug: $slug }) {
+                id
+                category
+                date
+                slug
+                title
+                description
+                article {
+                    html
+                }
+                image {
+                    id
+                    url
+                }
+            }
+        }
+    `;
+
+    const variables = {
+        slug,
+    };
+
+    return await graphcms.request(query, variables);
 };

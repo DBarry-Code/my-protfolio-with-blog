@@ -13,7 +13,7 @@ export const getStaticProps = async () => {
 function ProjectPage({ data }: any) {
     console.log(data);
     return (
-        <div>
+        <div className='container px-5 py-20 mx-auto'>
             <h1>Projects</h1>
         </div>
     );
