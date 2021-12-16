@@ -15,16 +15,19 @@ export const getBlogAndPortfolio = async () => {
         {
             projects(orderBy: date_DESC) {
                 id
-                title
                 slug
-                stack
+                title
                 date
+                codeLink
+                onlineLink
+                description
+                indev
+                highlight
+                stack
                 image {
+                    id
                     url
-                }
-                description {
-                    html
-                    text
+                    mimeType
                 }
             }
             blogs(orderBy: date_DESC) {
@@ -76,16 +79,19 @@ export const getAllPorjects = async () => {
         {
             projects(orderBy: date_DESC) {
                 id
-                title
                 slug
-                stack
+                title
                 date
+                codeLink
+                onlineLink
+                description
+                indev
+                highlight
+                stack
                 image {
+                    id
                     url
-                }
-                description {
-                    html
-                    text
+                    mimeType
                 }
             }
         }
