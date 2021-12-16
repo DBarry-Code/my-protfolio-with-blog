@@ -13,7 +13,6 @@ export const getStaticProps = async () => {
 };
 
 function ProjectPage({ data }: any) {
-    console.log(data);
     return (
         <section className='text-gray-600 body-font overflow-hidden'>
             <div className='container px-5 py-24 mx-auto'>
@@ -38,7 +37,7 @@ function ProjectPage({ data }: any) {
                                     (item: string, index: number) => (
                                         <span
                                             key={index}
-                                            className='inline-block py-1 px-2 mx-1 my-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest'
+                                            className='inline-block py-1 px-2 mr-1 my-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest'
                                         >
                                             {item}
                                         </span>

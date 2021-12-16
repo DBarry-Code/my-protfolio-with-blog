@@ -34,10 +34,10 @@ const Post = ({ data }: any) => {
                     <h1 className='text-3xl font-bold sm:pl-8 sm:py-6 sm:mt-0 mb-8 text-center sm:text-left'>
                         {data.blog.title}
                     </h1>
-                    <div className='rounded-lg h-64 overflow-hidden '>
+                    <div className='rounded-lg overflow-hidden '>
                         <img
                             className='m-auto'
-                            alt='Blog-image'
+                            alt={data.blog.title}
                             src={data.blog.image.url}
                         />
                     </div>

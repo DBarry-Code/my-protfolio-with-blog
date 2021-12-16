@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Hero from "../components/Hero/Hero";
 import { getBlogAndPortfolio } from "../lib/data";
 
 export const getStaticProps = async () => {
@@ -12,7 +13,6 @@ export const getStaticProps = async () => {
 };
 
 const Home: NextPage = ({ data }: any) => {
-    console.log(data);
     return (
         <>
             <Head>
@@ -23,9 +23,7 @@ const Home: NextPage = ({ data }: any) => {
                 />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <div className='container px-5 py-20 mx-auto'>
-                <h1 className='text-3xl font-bold underline'>Hello world!</h1>
-            </div>
+            <Hero />
         </>
     );
 };

@@ -57,8 +57,8 @@ const social = [
 
 const Footer = () => {
     return (
-        <footer className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-0 flex flex-col justify-center my-auto'>
-            <div className='mt-8 flex justify-center space-x-6'>
+        <footer className='max-w-3xl m-auto px-4 sm:px-6 lg:px-0 flex flex-col justify-center'>
+            <div className='flex justify-center space-x-6'>
                 {social.map((item) => (
                     <a
                         key={item.name}
