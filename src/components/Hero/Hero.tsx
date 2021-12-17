@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Hero = () => {
     return (
-        <section id='home' className='text-gray-600 body-font'>
-            <div className='container h-screen mx-auto flex px-5 flex-col justify-center items-center'>
+        <section id='home' className='text-gray-600 body-font h-screen'>
+            <div className='container h-full mx-auto flex px-5 flex-col justify-center items-center'>
                 <div className='flex flex-col mb-16 md:mb-0 items-center text-center'>
                     <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900'>
                         Barry Dabrowski
@@ -36,7 +36,7 @@ const Hero = () => {
                 </div>
                 <Link href='/#about'>
                     <a>
-                        <div className='icon-scroll'></div>
+                        <div className='icon-scroll animate-bounce'></div>
                     </a>
                 </Link>
             </div>

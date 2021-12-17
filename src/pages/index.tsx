@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Hero from "../components/Hero/Hero";
+import About from "../components/About/About";
 import { getBlogAndPortfolio } from "../lib/data";
 
 export const getStaticProps = async () => {
@@ -16,6 +17,7 @@ const Home: NextPage = ({ data }: any) => {
     return (
         <>
             <Head>
+                <html lang='de' />
                 <title>Barry`s` Portfolio Homepage</title>
                 <meta
                     name='description'
@@ -24,6 +26,7 @@ const Home: NextPage = ({ data }: any) => {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <Hero />
+            <About />
         </>
     );
 };

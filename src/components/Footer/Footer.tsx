@@ -71,7 +71,10 @@ const Footer = () => {
                     </a>
                 ))}
             </div>
-            <p className='text-gray-500 text-center mt-4 mb-10'>
+            <p className='text-gray-500 text-center mt-4 mb-2'>
+                Coded with Next.js , Tailwind , CSS and GraphCRM
+            </p>
+            <p className='text-gray-500 text-center mb-10'>
                 &copy;{new Date().getFullYear()} Barry Dabrowski
             </p>
         </footer>

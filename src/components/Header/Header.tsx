@@ -10,7 +10,7 @@ function Header() {
             <nav className='fixed w-full z-10 top-0 flex flex-wrap items-center justify-between px-2 py-3 bg-zinc-800 shadow-sm mb-3'>
                 <div className='container px-4 mx-auto flex flex-wrap items-center justify-between'>
                     <div className='w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
-                        <Link href='/'>
+                        <Link href='/#home'>
                             <a className='text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white'>
                                 Barry Dabrowski
                             </a>
@@ -32,7 +32,7 @@ function Header() {
                     >
                         <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
                             <li className='nav-item'>
-                                <Link href='/'>
+                                <Link href='/#home'>
                                     <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
                                         <span className='ml-2'>Home</span>
                                     </a>
@@ -42,6 +42,13 @@ function Header() {
                                 <Link href='/#about'>
                                     <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
                                         <span className='ml-2'>About</span>
+                                    </a>
+                                </Link>
+                            </li>
+                            <li className='nav-item'>
+                                <Link href='/#tech'>
+                                    <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
+                                        <span className='ml-2'>Technology</span>
                                     </a>
                                 </Link>
                             </li>
