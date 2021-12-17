@@ -1,8 +1,9 @@
 import React from "react";
+import Link from "next/link";
 
 const Hero = () => {
     return (
-        <section className='text-gray-600 body-font'>
+        <section id='home' className='text-gray-600 body-font'>
             <div className='container h-screen mx-auto flex px-5 flex-col justify-center items-center'>
                 <div className='flex flex-col mb-16 md:mb-0 items-center text-center'>
                     <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900'>
@@ -16,16 +17,28 @@ const Hero = () => {
                         CRM . Database
                     </p>
                     <div className='flex justify-center'>
-                        <button className='inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-900 rounded text-lg'>
-                            PROJECTS
-                        </button>
+                        <Link href='/#project'>
+                            <a>
+                                <button className='inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-900 rounded text-lg'>
+                                    PROJECTS
+                                </button>
+                            </a>
+                        </Link>
 
-                        <button className='ml-4 inline-flex text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-800 rounded text-lg'>
-                            HIRE ME
-                        </button>
+                        <Link href='/#contact'>
+                            <a>
+                                <button className='ml-4 inline-flex text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-800 rounded text-lg'>
+                                    HIRE ME
+                                </button>
+                            </a>
+                        </Link>
                     </div>
                 </div>
-                <div className='icon-scroll'></div>
+                <Link href='/#about'>
+                    <a>
+                        <div className='icon-scroll'></div>
+                    </a>
+                </Link>
             </div>
         </section>
     );
