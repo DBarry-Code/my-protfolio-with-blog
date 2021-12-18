@@ -38,7 +38,7 @@ const About = () => {
                                 Entwicklung. Eine Übersicht meiner verwendenten
                                 Stacks findet Ihr hier:
                             </p>
-                            <Link href='/#tech'>
+                            <Link href='/#stack'>
                                 <a className='text-indigo-500 font-bold inline-flex items-center mb-4 hover:text-indigo-900'>
                                     Meine Stacks
                                     <svg

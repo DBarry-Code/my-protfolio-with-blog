@@ -46,14 +46,14 @@ function Header() {
                                 </Link>
                             </li>
                             <li className='nav-item'>
-                                <Link href='/#tech'>
+                                <Link href='/#stack'>
                                     <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
-                                        <span className='ml-2'>Technology</span>
+                                        <span className='ml-2'>Stack</span>
                                     </a>
                                 </Link>
                             </li>
                             <li className='nav-item'>
-                                <Link href='/projects'>
+                                <Link href='/#project'>
                                     <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
                                         <span className='ml-2'>Projects</span>
                                     </a>
