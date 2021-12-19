@@ -33,7 +33,7 @@ const social = [
 
 const Footer = () => {
     return (
-        <footer className='max-w-3xl m-auto px-4 sm:px-6 lg:px-0 flex flex-col justify-center'>
+        <footer className='z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-0 flex flex-col justify-center'>
             <div className='flex justify-center space-x-6'>
                 {social.map((item) => (
                     <a
@@ -50,7 +50,7 @@ const Footer = () => {
             <p className='text-gray-500 text-center mt-4 mb-2'>
                 Coded with Next.js , Tailwind , CSS and GraphCRM
             </p>
-            <p className='text-gray-500 text-center mb-10'>
+            <p className='text-gray-500 text-center mb-2'>
                 &copy;{new Date().getFullYear()} Barry Dabrowski
             </p>
         </footer>

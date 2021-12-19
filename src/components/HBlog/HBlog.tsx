@@ -45,7 +45,7 @@ function HBlog({ blogs }: any) {
                                         /blog/${blog.slug}
                                     `}
                                     >
-                                        <a className='mt-3 text-indigo-500 inline-flex items-center hover:text-indigo-900'>
+                                        <a className='mt-3 text-indigo-500 inline-flex items-center '>
                                             Read More
                                             <svg
                                                 fill='none'

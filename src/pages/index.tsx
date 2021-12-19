@@ -6,6 +6,7 @@ import Stack from "../components/Stack/Stack";
 import HProject from "../components/HProject/HProject";
 import HBlog from "../components/HBlog/HBlog";
 import { getBlogAndPortfolio } from "../lib/data";
+import Contact from "../components/Contact/Contact";
 
 export const getStaticProps = async () => {
     const data = await getBlogAndPortfolio();
@@ -33,6 +34,7 @@ const Home: NextPage = ({ data }: any) => {
             <Stack />
             <HProject projects={data.projects} />
             <HBlog blogs={data.blogs} />
+            <Contact />
         </>
     );
 };
