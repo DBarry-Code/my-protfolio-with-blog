@@ -19,7 +19,7 @@ const Hero = () => {
                     <div className='flex justify-center'>
                         <Link href='/#project'>
                             <a>
-                                <button className='inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-900 rounded text-lg'>
+                                <button className='inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-900 rounded text-lg shadow-lg shadow-indigo-500/50'>
                                     PROJECTS
                                 </button>
                             </a>
@@ -27,7 +27,7 @@ const Hero = () => {
 
                         <Link href='/#contact'>
                             <a>
-                                <button className='ml-4 inline-flex text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-800 rounded text-lg'>
+                                <button className='ml-4 inline-flex text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-800 rounded text-lg shadow-lg shadow-green-500/50'>
                                     HIRE ME
                                 </button>
                             </a>

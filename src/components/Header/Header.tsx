@@ -7,7 +7,7 @@ function Header() {
 
     return (
         <header className='relative'>
-            <nav className='fixed w-full z-10 top-0 flex flex-wrap items-center justify-between px-2 py-3 bg-zinc-800 shadow-sm mb-3'>
+            <nav className='fixed w-full z-10 top-0 flex flex-wrap items-center justify-between px-2 py-3 mb-3 bg-zinc-800 shadow-lg shadow-zinc-500/50'>
                 <div className='container px-4 mx-auto flex flex-wrap items-center justify-between'>
                     <div className='w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
                         <Link href='/#home'>
@@ -60,7 +60,7 @@ function Header() {
                                 </Link>
                             </li>
                             <li className='nav-item'>
-                                <Link href='/blog'>
+                                <Link href='/#blog'>
                                     <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
                                         <span className='ml-2'>Blog</span>
                                     </a>

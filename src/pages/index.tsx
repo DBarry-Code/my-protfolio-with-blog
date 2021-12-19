@@ -4,6 +4,7 @@ import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
 import Stack from "../components/Stack/Stack";
 import HProject from "../components/HProject/HProject";
+import HBlog from "../components/HBlog/HBlog";
 import { getBlogAndPortfolio } from "../lib/data";
 
 export const getStaticProps = async () => {
@@ -30,7 +31,8 @@ const Home: NextPage = ({ data }: any) => {
             <Hero />
             <About />
             <Stack />
-            <HProject />
+            <HProject projects={data.projects} />
+            <HBlog blogs={data.blogs} />
         </>
     );
 };

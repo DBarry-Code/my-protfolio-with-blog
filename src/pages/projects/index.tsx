@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
 function ProjectPage({ data }: any) {
     return (
         <section className='text-gray-600 body-font overflow-hidden'>
-            <div className='container px-5 py-24 mx-auto'>
+            <div className='container h-full px-5 py-24 mx-auto'>
                 <h1 className='text-3xl font-bold text-gray-900 title-font mt-4 mb-10'>
                     Projects
                 </h1>

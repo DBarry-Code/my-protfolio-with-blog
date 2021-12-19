@@ -9,9 +9,7 @@ function Stack() {
                     <h1 className='sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4'>
                         Meine Stacks
                     </h1>
-                    <p className='text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-600'>
-                        Dies sind meine Daily in use Stacks.
-                    </p>
+
                     <div className='flex mt-6 justify-center'>
                         <div className='w-14 h-1 rounded-full bg-indigo-500 inline-flex'></div>
                     </div>
