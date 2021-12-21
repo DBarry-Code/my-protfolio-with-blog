@@ -25,7 +25,7 @@ function HBlog({ blogs }: any) {
                                 <div className='inline-flex items-center justify-center mb-5 flex-shrink-0'>
                                     <img
                                         src={blog.image.url}
-                                        alt={blog.slug}
+                                        alt={blog.title}
                                         className='rounded-lg object-cover object-center w-1/2'
                                     />
                                 </div>
@@ -40,11 +40,7 @@ function HBlog({ blogs }: any) {
                                     <p className='leading-relaxed mt-3'>
                                         {blog.description}
                                     </p>
-                                    <Link
-                                        href={`
-                                        /blog/${blog.slug}
-                                    `}
-                                    >
+                                    <Link href={`/blog/${blog.slug}`}>
                                         <a className='mt-3 text-indigo-500 inline-flex items-center '>
                                             Read More
                                             <svg

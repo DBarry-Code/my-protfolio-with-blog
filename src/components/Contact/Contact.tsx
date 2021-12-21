@@ -1,10 +1,29 @@
 import React from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+interface IFormInputs {
+    name: string;
+    email: string;
+    message: string;
+}
 
 function Contact() {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset,
+    } = useForm<IFormInputs>();
+
+    const onSubmit: SubmitHandler<IFormInputs> = (data, e: any) => {
+        console.log(data);
+        e.target.reset();
+    };
+
     return (
         <section
             id='contact'
-            className='text-gray-600 body-font  sm:h-screen sm:-mb-24'
+            className='text-gray-600 body-font sm:h-screen sm:-mb-24'
         >
             <div className='container h-full px-5 py-24 mx-auto flex flex-col justify-center'>
                 <div className='flex flex-col text-center w-full mb-12'>
@@ -12,66 +31,97 @@ function Contact() {
                         Contact Me
                     </h1>
                     <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
-                        Whatever cardigan tote bag tumblr hexagon brooklyn
-                        asymmetrical gentrify.
+                        Send mir eine Message. Ich melde mich zeitnah zurück.
                     </p>
                 </div>
-                <div className='lg:w-1/2 md:w-2/3 mx-auto'>
+                <form
+                    className='lg:w-1/2 md:w-2/3 mx-auto'
+                    onSubmit={handleSubmit(onSubmit)}
+                >
                     <div className='flex flex-wrap -m-2'>
                         <div className='p-2 w-1/2'>
                             <div className='relative'>
-                                <label
-                                    htmlFor='name'
-                                    className='leading-7 text-sm text-gray-600'
-                                >
+                                <label className='leading-7 text-sm text-gray-600'>
                                     Name
                                 </label>
                                 <input
                                     type='text'
-                                    id='name'
-                                    name='name'
-                                    className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                                    {...register("name", { required: true })}
+                                    className={`${
+                                        errors.name
+                                            ? "ring-2 ring-red-500"
+                                            : null
+                                    } w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 
+                                    focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out 
+                                     `}
                                 />
+
+                                <p className='text-red-500'>
+                                    {errors.name?.type === "required" &&
+                                        "Name is required"}
+                                </p>
                             </div>
                         </div>
                         <div className='p-2 w-1/2'>
                             <div className='relative'>
-                                <label
-                                    htmlFor='email'
-                                    className='leading-7 text-sm text-gray-600'
-                                >
+                                <label className='leading-7 text-sm text-gray-600'>
                                     Email
                                 </label>
                                 <input
                                     type='email'
-                                    id='email'
-                                    name='email'
-                                    className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                                    {...register("email", {
+                                        required: true,
+                                        pattern:
+                                            /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+                                    })}
+                                    className={`${
+                                        errors.name
+                                            ? "ring-2 ring-red-500"
+                                            : null
+                                    } w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2
+                                        focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
                                 />
+                                <p className='text-red-500'>
+                                    {errors.email?.type === "pattern" &&
+                                        "Email is invalid"}
+                                </p>
+                                <p className='text-red-500'>
+                                    {errors.email?.type === "required" &&
+                                        "Email is required"}
+                                </p>
                             </div>
                         </div>
                         <div className='p-2 w-full'>
                             <div className='relative'>
-                                <label
-                                    htmlFor='message'
-                                    className='leading-7 text-sm text-gray-600'
-                                >
+                                <label className='leading-7 text-sm text-gray-600'>
                                     Message
                                 </label>
                                 <textarea
                                     id='message'
-                                    name='message'
-                                    className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'
+                                    {...register("message", { required: true })}
+                                    className={`${
+                                        errors.message
+                                            ? "ring-2 ring-red-500"
+                                            : null
+                                    } w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-
+                                     focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out`}
                                 ></textarea>
+                                <p className='text-red-500'>
+                                    {errors.message?.type === "required" &&
+                                        "Message is required"}
+                                </p>
                             </div>
                         </div>
-                        <div className='p-2 w-full'>
-                            <button className='flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
-                                Button
+                        <div className='p-2 w-full flex justify-center'>
+                            <button
+                                type='submit'
+                                className='ml-4 inline-flex text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-800 rounded text-lg shadow-lg shadow-green-500/50'
+                            >
+                                Send Message
                             </button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
     );
