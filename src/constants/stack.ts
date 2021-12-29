@@ -1,21 +1,27 @@
 export const Frontend = [
+    "HTML",
+    "CSS 3",
+    "SASS / SCSS",
+    "jQuery",
+    "JavaScript",
     "React",
     "Next.js",
     "Vue",
-    "jQuery",
-    "JavaScript",
-    "HTML",
-    "SASS / SCSS",
+    "Handelbars",
+    "ESJ",
 ];
 
 export const Backend = [
     "NodeJS",
     "ExpressJS",
     "Firebase",
+    "AWS",
     "CRM",
     "Postsql",
     "MongoDB",
     "Socket.IO",
+    "RestAPI",
+    "GraphQL ",
 ];
 
 export const UxUi = [

@@ -25,7 +25,7 @@ function ProjectPage({ data }: any) {
                             key={project.id}
                             className='p-12 md:w-1/2 flex flex-col items-start'
                         >
-                            <div className='rounded-lg overflow-hidden'>
+                            <div className='rounded-lg overflow-hidden shadow-lg shadow-gray-300'>
                                 <img
                                     alt={project.slug}
                                     className='object-contain object-center h-full w-full'

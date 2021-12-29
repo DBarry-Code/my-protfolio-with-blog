@@ -13,8 +13,8 @@ const Hero = () => {
                         &#123; Full - Stack Web Developer &#125;
                     </h2>
                     <p className='mb-8 mt-8 leading-relaxed font-bold'>
-                        HTML . SASS . JavaScript . NodeJS . React . Next.js .
-                        CRM . Database
+                        HTML . (S)CSS . JavaScript . NodeJS . React . Next.js .
+                        RestAPI . GraphQL . CRM . Database
                     </p>
                     <div className='flex justify-center'>
                         <Link href='/#project'>
