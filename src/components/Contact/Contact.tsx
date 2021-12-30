@@ -15,8 +15,40 @@ function Contact() {
         reset,
     } = useForm<IFormInputs>();
 
-    const onSubmit: SubmitHandler<IFormInputs> = (data, e: any) => {
-        console.log(data);
+    const onSubmit: SubmitHandler<IFormInputs> = async (data, e: any) => {
+        const check = prompt("Wie lautet deine Email?");
+
+        if (check?.toLocaleLowerCase() !== data.email) {
+            e.target.reset();
+            alert(`Sorry ${check} war nicht correct!`);
+            return;
+        }
+        const response = await fetch(
+            "https://formsubmit.co/ajax/03527b1176e86a52253564a006b47e2f",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    message: data.message,
+                }),
+            }
+        );
+
+        const backData = await response.json();
+
+        if (backData.success === !true) {
+            alert(
+                `Sorry ${data.name}, da ist ein fehler... Deine Nachricht wurde LEIDER NICHT VERSENDET!!!`
+            );
+            return;
+        }
+        alert(`Danke ${data.name} deine Nachricht wurde versendet`);
+
         e.target.reset();
     };
 
