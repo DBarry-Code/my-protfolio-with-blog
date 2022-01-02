@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPage, GetServerSideProps } from "next";
 import Head from "next/head";
 import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
@@ -8,7 +8,16 @@ import HBlog from "../components/HBlog/HBlog";
 import { getBlogAndPortfolio } from "../lib/data";
 import Contact from "../components/Contact/Contact";
 
-export const getStaticProps = async () => {
+// export const getStaticProps: GetStaticProps = async () => {
+//     const data = await getBlogAndPortfolio();
+//     return {
+//         props: {
+//             data,
+//         },
+//     };
+// };
+
+export const getServerSideProps: GetServerSideProps = async () => {
     const data = await getBlogAndPortfolio();
     return {
         props: {
