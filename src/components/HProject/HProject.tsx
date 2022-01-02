@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 function HProject({ projects }: any) {
-    const items = projects.filter((project) => project.highlight === true);
+    const items = projects.filter((project: any) => project.highlight === true);
 
     return (
         <section id='project' className='text-gray-600 body-font sm:h-screen'>

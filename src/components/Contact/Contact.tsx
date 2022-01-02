@@ -20,7 +20,7 @@ function Contact() {
 
         if (check?.toLocaleLowerCase() !== data.email) {
             e.target.reset();
-            alert(`Sorry ${check} war nicht correct!`);
+            alert(`Sorry ${check} war nicht deine Email!`);
             return;
         }
         const response = await fetch(
