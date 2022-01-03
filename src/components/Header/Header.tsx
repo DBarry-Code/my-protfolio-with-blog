@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
+import { social } from "../../constants/socialIcons";
 
 function Header() {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -53,6 +54,25 @@ function Header() {
                                             </span>
                                         </a>
                                     </Link>
+                                </li>
+                            ))}
+                            {social.map((item, index) => (
+                                <li key={index} className='nav-item'>
+                                    <a
+                                        key={item.name}
+                                        href={item.href}
+                                        target={item.target}
+                                        onClick={toggleMenu}
+                                        className='px-3 py-1 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
+                                    >
+                                        <span className='sr-only'>
+                                            {item.name}
+                                        </span>
+                                        <item.icon
+                                            className='h-5 w-5 ml-2'
+                                            aria-hidden='true'
+                                        />
+                                    </a>
                                 </li>
                             ))}
                         </ul>
