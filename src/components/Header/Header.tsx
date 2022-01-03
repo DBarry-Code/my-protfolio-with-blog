@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 
 function Header() {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
+    const toggleMenu = () => setNavbarOpen(!navbarOpen);
 
     return (
         <header className='relative'>
@@ -33,42 +34,60 @@ function Header() {
                         <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
                             <li className='nav-item'>
                                 <Link href='/#home'>
-                                    <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
+                                    <a
+                                        onClick={toggleMenu}
+                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
+                                    >
                                         <span className='ml-2'>Home</span>
                                     </a>
                                 </Link>
                             </li>
                             <li className='nav-item'>
                                 <Link href='/#about'>
-                                    <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
+                                    <a
+                                        onClick={toggleMenu}
+                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
+                                    >
                                         <span className='ml-2'>About</span>
                                     </a>
                                 </Link>
                             </li>
                             <li className='nav-item'>
                                 <Link href='/#stack'>
-                                    <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
+                                    <a
+                                        onClick={toggleMenu}
+                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
+                                    >
                                         <span className='ml-2'>Stack</span>
                                     </a>
                                 </Link>
                             </li>
                             <li className='nav-item'>
                                 <Link href='/#project'>
-                                    <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
+                                    <a
+                                        onClick={toggleMenu}
+                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
+                                    >
                                         <span className='ml-2'>Projects</span>
                                     </a>
                                 </Link>
                             </li>
                             <li className='nav-item'>
                                 <Link href='/#blog'>
-                                    <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
+                                    <a
+                                        onClick={toggleMenu}
+                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
+                                    >
                                         <span className='ml-2'>Blog</span>
                                     </a>
                                 </Link>
                             </li>
                             <li className='nav-item'>
                                 <Link href='/#contact'>
-                                    <a className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'>
+                                    <a
+                                        onClick={toggleMenu}
+                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
+                                    >
                                         <span className='ml-2'>Contact</span>
                                     </a>
                                 </Link>

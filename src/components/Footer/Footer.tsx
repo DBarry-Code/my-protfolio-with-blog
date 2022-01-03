@@ -48,7 +48,7 @@ const Footer = () => {
                 ))}
             </div>
             <p className='text-gray-500 text-center mt-4 mb-2'>
-                Coded with Next.js , Tailwind , CSS and GraphCRM
+                Coded with Next.js , Tailwind , GraphQL and GraphCRM
             </p>
             <p className='text-gray-500 text-center mb-2'>
                 &copy;{new Date().getFullYear()} Barry Dabrowski
