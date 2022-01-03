@@ -6,6 +6,15 @@ function Header() {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     const toggleMenu = () => setNavbarOpen(!navbarOpen);
 
+    const navigation = [
+        { link: "/#home", text: "Home" },
+        { link: "/#about", text: "About" },
+        { link: "/#stack", text: "Stack" },
+        { link: "/#project", text: "Projects" },
+        { link: "/#blog", text: "Blog" },
+        { link: "/#contact", text: "Contact" },
+    ];
+
     return (
         <header className='relative'>
             <nav className='fixed w-full z-10 top-0 flex flex-wrap items-center justify-between px-2 py-3 mb-3 bg-zinc-800 shadow-lg shadow-zinc-500/50'>
@@ -32,66 +41,20 @@ function Header() {
                         id='example-navbar-danger'
                     >
                         <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
-                            <li className='nav-item'>
-                                <Link href='/#home'>
-                                    <a
-                                        onClick={toggleMenu}
-                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
-                                    >
-                                        <span className='ml-2'>Home</span>
-                                    </a>
-                                </Link>
-                            </li>
-                            <li className='nav-item'>
-                                <Link href='/#about'>
-                                    <a
-                                        onClick={toggleMenu}
-                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
-                                    >
-                                        <span className='ml-2'>About</span>
-                                    </a>
-                                </Link>
-                            </li>
-                            <li className='nav-item'>
-                                <Link href='/#stack'>
-                                    <a
-                                        onClick={toggleMenu}
-                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
-                                    >
-                                        <span className='ml-2'>Stack</span>
-                                    </a>
-                                </Link>
-                            </li>
-                            <li className='nav-item'>
-                                <Link href='/#project'>
-                                    <a
-                                        onClick={toggleMenu}
-                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
-                                    >
-                                        <span className='ml-2'>Projects</span>
-                                    </a>
-                                </Link>
-                            </li>
-                            <li className='nav-item'>
-                                <Link href='/#blog'>
-                                    <a
-                                        onClick={toggleMenu}
-                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
-                                    >
-                                        <span className='ml-2'>Blog</span>
-                                    </a>
-                                </Link>
-                            </li>
-                            <li className='nav-item'>
-                                <Link href='/#contact'>
-                                    <a
-                                        onClick={toggleMenu}
-                                        className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
-                                    >
-                                        <span className='ml-2'>Contact</span>
-                                    </a>
-                                </Link>
-                            </li>
+                            {navigation.map((nav, index) => (
+                                <li key={index} className='nav-item'>
+                                    <Link href={nav.link}>
+                                        <a
+                                            onClick={toggleMenu}
+                                            className='px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75'
+                                        >
+                                            <span className='ml-2'>
+                                                {nav.text}
+                                            </span>
+                                        </a>
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
