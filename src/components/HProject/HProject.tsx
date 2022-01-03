@@ -8,7 +8,7 @@ function HProject({ projects }: any) {
     return (
         <section id='project' className='text-gray-600 body-font sm:h-screen'>
             <div className='container h-full px-5 py-24 mx-auto flex flex-col justify-center'>
-                <div className='text-center mb-20'>
+                <div className='text-center mb-10'>
                     <h1 className='sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4'>
                         Projects in Highlight
                     </h1>

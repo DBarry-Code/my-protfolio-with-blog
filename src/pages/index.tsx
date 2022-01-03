@@ -8,15 +8,6 @@ import HBlog from "../components/HBlog/HBlog";
 import { getBlogAndPortfolio } from "../lib/data";
 import Contact from "../components/Contact/Contact";
 
-// export const getStaticProps: GetStaticProps = async () => {
-//     const data = await getBlogAndPortfolio();
-//     return {
-//         props: {
-//             data,
-//         },
-//     };
-// };
-
 export const getServerSideProps: GetServerSideProps = async () => {
     const data = await getBlogAndPortfolio();
     return {
