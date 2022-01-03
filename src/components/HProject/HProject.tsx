@@ -38,7 +38,7 @@ function HProject({ projects }: any) {
                             <p className='text-base leading-relaxed mt-2'>
                                 {item.description}
                             </p>
-                            <div className='flex justify-between  items-center flex-wrap pb-4 mb-2 border-b-2 border-gray-100 mt-4 w-full'>
+                            <div className='flex justify-between items-center flex-wrap pb-4 mb-2 mt-4 w-full'>
                                 <div>
                                     <Link href={item.codeLink}>
                                         <a target='_blank'>
