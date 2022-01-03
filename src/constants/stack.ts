@@ -1,4 +1,4 @@
-export const Frontend = [
+export const Frontend: string[] = [
     "HTML",
     "CSS 3",
     "SASS / SCSS",
@@ -11,7 +11,7 @@ export const Frontend = [
     "ESJ",
 ];
 
-export const Backend = [
+export const Backend: string[] = [
     "NodeJS",
     "ExpressJS",
     "Firebase",
@@ -24,7 +24,7 @@ export const Backend = [
     "GraphQL ",
 ];
 
-export const UxUi = [
+export const UxUi: string[] = [
     "Adobe XD",
     "Ilustarator",
     "Figma",
