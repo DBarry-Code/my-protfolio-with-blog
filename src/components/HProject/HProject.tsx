@@ -4,10 +4,11 @@ import Link from "next/link";
 
 function HProject({ projects }: any) {
     const items = projects.filter((project: any) => project.highlight === true);
+    console.log(items);
 
     return (
         <section id='project' className='text-gray-600 body-font sm:h-screen'>
-            <div className='container h-full px-5 py-24 mx-auto flex flex-col justify-center'>
+            <div className='container h-full px-5 pt-24 pb-10 mx-auto flex flex-col justify-center'>
                 <div className='text-center mb-10'>
                     <h1 className='sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4'>
                         Projects in Highlight
@@ -28,6 +29,18 @@ function HProject({ projects }: any) {
                                     className='object-cover object-center h-full w-full'
                                     src={item.image.url}
                                 />
+                            </div>
+                            <div className='flex flex-wrap mt-2'>
+                                {item.stack.map(
+                                    (item: string, index: number) => (
+                                        <span
+                                            key={index}
+                                            className='py-1 px-2 mr-1 my-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest'
+                                        >
+                                            {item}
+                                        </span>
+                                    )
+                                )}
                             </div>
 
                             <h2 className='text-xl font-medium title-font text-gray-900 mt-5'>
