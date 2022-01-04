@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { getAllPorjects } from "../../lib/data";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const data = await getAllPorjects();
     return {
         props: {

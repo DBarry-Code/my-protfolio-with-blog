@@ -4,7 +4,6 @@ import Link from "next/link";
 
 function HProject({ projects }: any) {
     const items = projects.filter((project: any) => project.highlight === true);
-    console.log(items);
 
     return (
         <section id='project' className='text-gray-600 body-font sm:h-screen'>
