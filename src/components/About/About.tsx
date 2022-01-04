@@ -33,13 +33,12 @@ const About = () => {
                                 <p className='leading-relaxed text-lg mb-2'>
                                     <b>Hallo,</b>
                                     <br /> ich bin der Barry, ich bin ein Web
-                                    Software Entwickler based in Hamburg -
-                                    Germany. Ich entwickle Web Applicationen und
-                                    benutze meist den MERN Stack, meine vorliebe
-                                    liegt in der React/Next.js - CRM mit
-                                    GrarphQL gestützten Entwicklung. Eine
-                                    Übersicht meiner verwendenten Stacks findet
-                                    Ihr hier:
+                                    Software Entwickler aus Hamburg. Ich
+                                    entwickle Webapplikationen und benutze meist
+                                    den MERN Stack, meine Vorliebe liegt in der
+                                    React/Next.js - CRM mit GrarphQL gestützten
+                                    Entwicklung. Eine Übersicht meiner
+                                    Verwendenten Stacks findet Ihr hier:
                                 </p>
                                 <Link href='/#stack'>
                                     <a className='text-indigo-500 font-bold inline-flex items-center mb-4 hover:text-indigo-900'>
@@ -60,23 +59,20 @@ const About = () => {
                                 </Link>
                                 <br />
                                 <p className='leading-relaxed text-lg mb-2'>
-                                    Einer meine Favorieten ist das vorbilden im
-                                    bereich coden sowie hardware. Ich
+                                    Einer meine Favoriten ist das Vorbilden im
+                                    Bereich coden sowie Hardware. Ich
                                     Unterrichte gern auch Kinder in der
-                                    Web-Entwicklung um Begeisterung so wie
-                                    Talente zu finden und hier Potenzail
+                                    Web-Entwicklung, um Begeisterung so wie
+                                    Talente zu finden und hier Potenzial
                                     aufzugeigen.
                                 </p>
                                 <br />
                                 <p className='leading-relaxed text-lg mb-2'>
-                                    Um euch meine Potenzial aufzuzeigen hab ich
-                                    diese Perönliche Protfoilio mit Next.js
+                                    Um euch meine Potenzial aufzuzeigen, hab ich
+                                    diese Persönliche Portfolio mit Next.js
                                     Tailwind und GraphCRM erstell. Hier finde
-                                    ihr all meine Projeckte die Online sind und
-                                    den Code auf Github. ein Blog gibt es auch
-                                    hier werde ich versiedene Artickel Posten
-                                    zum thema IT / Webentwicklung sowie Day - in
-                                    - Life eines Webentwicklers.
+                                    ihr all meine Projekte die online sind und
+                                    den Code auf GitHub.
                                 </p>
                                 <Link href='/#project'>
                                     <a className='text-indigo-500 font-bold inline-flex items-center mb-4 hover:text-indigo-900'>
@@ -97,9 +93,10 @@ const About = () => {
                                 </Link>
                                 <br />
                                 <p className='leading-relaxed text-lg mb-2'>
-                                    In meinen Blogs werde ich versiedene Artikel
-                                    Posten zum Thema IT / Webentwicklung sowie
-                                    Day - in - Life eines Webentwicklers.
+                                    In meinen Blogs werde ich vermiedene Artikel
+                                    veröffentlichen. Zum Thema IT /
+                                    Webentwicklung sowie. Day - in - Life eines
+                                    Webentwicklers.
                                 </p>
                                 <Link href='/#blog'>
                                     <a className='text-indigo-500 font-bold inline-flex items-center mb-4 hover:text-indigo-900'>

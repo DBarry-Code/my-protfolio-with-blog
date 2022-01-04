@@ -28,16 +28,16 @@ function ProjectPage({ data }: any) {
                             <div className='rounded-lg overflow-hidden shadow-lg shadow-gray-300'>
                                 <img
                                     alt={project.slug}
-                                    className='object-contain object-center h-full w-full'
+                                    className='object-cover object-center h-full w-full'
                                     src={project.image.url}
                                 />
                             </div>
-                            <div className='flex mt-2'>
+                            <div className='flex flex-wrap mt-2'>
                                 {project.stack.map(
                                     (item: string, index: number) => (
                                         <span
                                             key={index}
-                                            className='inline-block py-1 px-2 mr-1 my-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest'
+                                            className='py-1 px-2 mr-1 my-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest'
                                         >
                                             {item}
                                         </span>
