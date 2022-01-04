@@ -11,7 +11,7 @@ export const getStaticPaths = () => {
     };
 };
 
-export const getStaticProps = async ({ params }: any) => {
+export const getServerSideProps = async ({ params }: any) => {
     const data = await getPostBySlug(params.slug);
 
     return {
