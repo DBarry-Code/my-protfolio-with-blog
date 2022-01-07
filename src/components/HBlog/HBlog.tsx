@@ -5,11 +5,16 @@ import Link from "next/link";
 function HBlog({ blogs }: any) {
     return (
         <section id='blog' className='text-gray-600 body-font sm:h-screen'>
-            <div className='container px-5 py-24 mx-auto h-full flex flex-col justify-center'>
+            <div className='container px-5 pt-24 pb-5 mx-auto h-full flex flex-col justify-center'>
                 <div className='text-center mb-10'>
                     <h1 className='sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4'>
                         Blogs im Highlight
                     </h1>
+                    <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
+                        Zurzeit sind das nur Testblogs dienen als Platzhalter.
+                        Bin grade dabei welche zu Erstellen. Also freu euch auf
+                        Updates.
+                    </p>
                     <div className='flex mt-6 justify-center'>
                         <div className='w-16 h-1 rounded-full bg-indigo-500 inline-flex'></div>
                     </div>
