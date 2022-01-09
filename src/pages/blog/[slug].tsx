@@ -7,11 +7,11 @@ import { getPostBySlug } from "../../lib/data";
 export const getStaticPaths = () => {
     return {
         paths: [],
-        fallback: true,
+        fallback: false,
     };
 };
 
-export const getServerSideProps = async ({ params }: any) => {
+export const getStaticProps = async ({ params }: any) => {
     const data = await getPostBySlug(params.slug);
 
     return {
