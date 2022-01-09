@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { getAllBllogs } from "../../lib/data";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     const data = await getAllBllogs();
     return {
         props: {

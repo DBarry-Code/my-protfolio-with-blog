@@ -7,7 +7,7 @@ import { getPostBySlug } from "../../lib/data";
 export const getStaticPaths = () => {
     return {
         paths: [],
-        fallback: false,
+        fallback: true,
     };
 };
 
